@@ -1,0 +1,68 @@
+{
+  ".": {
+    "prog1.py": {
+      "functions": {
+        "calculate_area": {
+          "name": "calculate_area",
+          "variables": {
+            "pi": "math.pi",
+            "area": "pi * radius ** 2"
+          },
+          "dependencies": [],
+          "line_number": 3
+        },
+        "greet_user": {
+          "name": "greet_user",
+          "variables": {},
+          "dependencies": [],
+          "line_number": 8
+        }
+      },
+      "classes": {},
+      "dependencies": [
+        "math"
+      ]
+    },
+    "prog2.py": {
+      "functions": {
+        "print_weather": {
+          "name": "print_weather",
+          "variables": {
+            "weather": "WeatherAPI(api_key)",
+            "data": "weather.get_weather(location)"
+          },
+          "dependencies": [],
+          "line_number": 12
+        }
+      },
+      "classes": {
+        "WeatherAPI": {
+          "name": "WeatherAPI",
+          "methods": {
+            "__init__": {
+              "name": "__init__",
+              "variables": {},
+              "dependencies": [],
+              "line_number": 4
+            },
+            "get_weather": {
+              "name": "get_weather",
+              "variables": {
+                "url": "f'http://api.weather.com/data?location={location}&key={self.api_key}'",
+                "response": "requests.get(url)"
+              },
+              "dependencies": [],
+              "line_number": 7
+            }
+          },
+          "variables": {},
+          "dependencies": [],
+          "line_number": 3
+        }
+      },
+      "dependencies": [
+        "requests"
+      ]
+    }
+  }
+}
